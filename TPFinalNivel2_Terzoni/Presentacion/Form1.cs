@@ -27,6 +27,7 @@ namespace Presentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             Cargar();
+
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -48,8 +49,9 @@ namespace Presentacion
             try
             {
                 listaArticulos = negocio.Listar();
-
                 dgvArticulos.DataSource = listaArticulos;
+                OcultarColumnas();
+                CargarImagen(listaArticulos[0].Imagen);
 
             }
             catch (Exception ex)
@@ -70,6 +72,12 @@ namespace Presentacion
 
                 pbxImagenArticulo.Load("https://editorial.unc.edu.ar/wp-content/uploads/sites/33/2022/09/placeholder.png");
             }
+        }
+
+        private void OcultarColumnas()
+        {
+            dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
         }
 
 

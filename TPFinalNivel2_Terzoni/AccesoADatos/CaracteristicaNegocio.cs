@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Negocio;
 using Dominio;
 
 namespace Negocio
 {
-    public class CategoriaNegocio
+    public class CaracteristicaNegocio
     {
 
-        public List <Categoria> listarCategoria()
+        public List<Caracteristica> Listar()
         {
-            List <Categoria> categoria = new List <Categoria> ();
-            AccesoADatos datos = new AccesoADatos ();
+
+            List<Caracteristica> lista = new List<Caracteristica>();
+            AccesoADatos datos = new AccesoADatos();
 
             try
             {
@@ -23,15 +23,15 @@ namespace Negocio
 
                 while (datos.Lector.Read())
                 {
-                    Categoria aux = new Categoria();
+
+                    Caracteristica aux = new Caracteristica();
 
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    categoria.Add (aux);
 
+                    lista.Add(aux);
                 }
-
-                return categoria;
+                return lista;
 
             }
             catch (Exception ex)
@@ -39,14 +39,7 @@ namespace Negocio
 
                 throw ex;
             }
-            finally
-            {
-                datos.CerrarConexion();
-            }
 
-
-        } 
-
-
+        }
     }
 }
