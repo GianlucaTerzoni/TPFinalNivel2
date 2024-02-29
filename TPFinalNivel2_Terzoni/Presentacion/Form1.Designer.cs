@@ -47,9 +47,10 @@
             // 
             // dgvArticulos
             // 
-            this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(12, 75);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.Size = new System.Drawing.Size(835, 330);
             this.dgvArticulos.TabIndex = 0;
