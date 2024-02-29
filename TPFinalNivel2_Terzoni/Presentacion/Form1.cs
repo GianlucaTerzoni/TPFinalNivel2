@@ -29,6 +29,16 @@ namespace Presentacion
             Cargar();
         }
 
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                CargarImagen(seleccionado.Imagen);
+            }
+
+        }
+
 
         private void Cargar()
         {
@@ -47,6 +57,19 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
 
+        }
+
+        private void CargarImagen(string imagen)
+        {
+            try
+            {
+                pbxImagenArticulo.Load(imagen);
+            }
+            catch (Exception)
+            {
+
+                pbxImagenArticulo.Load("https://editorial.unc.edu.ar/wp-content/uploads/sites/33/2022/09/placeholder.png");
+            }
         }
 
 

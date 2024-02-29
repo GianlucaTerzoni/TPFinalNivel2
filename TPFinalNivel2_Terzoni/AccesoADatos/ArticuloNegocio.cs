@@ -31,7 +31,10 @@ namespace Negocio
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    aux.Imagen = (string)datos.Lector["ImagenUrl"];
+
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.Imagen = (string)datos.Lector["ImagenUrl"];
+
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
                     lista.Add(aux);

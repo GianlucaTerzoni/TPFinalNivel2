@@ -54,12 +54,14 @@
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.Size = new System.Drawing.Size(835, 330);
             this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // pbxImagenArticulo
             // 
             this.pbxImagenArticulo.Location = new System.Drawing.Point(912, 75);
             this.pbxImagenArticulo.Name = "pbxImagenArticulo";
             this.pbxImagenArticulo.Size = new System.Drawing.Size(288, 276);
+            this.pbxImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenArticulo.TabIndex = 1;
             this.pbxImagenArticulo.TabStop = false;
             // 
