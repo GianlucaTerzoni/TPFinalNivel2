@@ -97,5 +97,37 @@ namespace Presentacion
             Cargar();
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Eliminar();             
+        }
+
+        private void Eliminar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+
+            try
+            {
+
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+                    negocio.Eliminar(seleccionado);
+
+                    Cargar();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al intentar eliminar el articulo.");
+            }
+        }
     }
 }

@@ -91,7 +91,6 @@ namespace Negocio
             }
         }
 
-
         public void Modificar(Articulo articulo)
         {
             AccesoADatos datos = new AccesoADatos();
@@ -121,5 +120,22 @@ namespace Negocio
             }
         }
 
+
+        public void  Eliminar(Articulo articulo)
+        {
+            AccesoADatos datos = new AccesoADatos();
+
+            try
+            {
+                datos.SetearConsulta("Delete from ARTICULOS where Id = @Id");
+                datos.SetearParametro("@Id", articulo.Id);
+                datos.EjecutarAccion();
+
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }
