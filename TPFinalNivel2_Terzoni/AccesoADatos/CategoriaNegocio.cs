@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Negocio;
 using Dominio;
 
 namespace Negocio
@@ -11,10 +11,11 @@ namespace Negocio
     public class CategoriaNegocio
     {
 
-        public List <Categoria> listarCategoria()
+        public List<Categoria> Listar()
         {
-            List <Categoria> categoria = new List <Categoria> ();
-            AccesoADatos datos = new AccesoADatos ();
+
+            List<Categoria> lista = new List<Categoria>();
+            AccesoADatos datos = new AccesoADatos();
 
             try
             {
@@ -23,30 +24,23 @@ namespace Negocio
 
                 while (datos.Lector.Read())
                 {
+
                     Categoria aux = new Categoria();
 
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    categoria.Add (aux);
 
+                    lista.Add(aux);
                 }
-
-                return categoria;
+                return lista;
 
             }
             catch (Exception ex)
             {
 
                 throw ex;
-            }
-            finally
-            {
-                datos.CerrarConexion();
-            }
-
-
-        } 
-
-
+            }          
+        }
+    
     }
 }

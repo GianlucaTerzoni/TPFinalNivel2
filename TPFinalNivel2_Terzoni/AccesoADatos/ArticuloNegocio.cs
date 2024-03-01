@@ -37,11 +37,11 @@ namespace Negocio
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
-                    aux.Marca = new Caracteristica();
+                    aux.Marca = new Marca();
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
                     aux.Marca.Descripcion = (string)datos.Lector["Marca"];
 
-                    aux.Categoria = new Caracteristica();
+                    aux.Categoria = new Categoria();
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
@@ -64,7 +64,32 @@ namespace Negocio
 
         }
 
+        public void Agregar(Articulo nuevo)
+        {
+            AccesoADatos datos = new AccesoADatos();
 
+            try
+            {
+                datos.SetearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdCategoria, IdMarca) VALUES (@Codigo, @Nombre, @Descripcion, @ImagenUrl, @Precio, @IdCategoria, @IdMarca)");
+                datos.SetearParametro("@Codigo", nuevo.Codigo);
+                datos.SetearParametro("@Nombre", nuevo.Nombre);
+                datos.SetearParametro("@Descripcion", nuevo.Descripcion);
+                datos.SetearParametro("@Precio", nuevo.Precio);
+                datos.SetearParametro("@IdCategoria", nuevo.Categoria.Id);
+                datos.SetearParametro("@IdMarca", nuevo.Marca.Id);
+                datos.SetearParametro("ImagenUrl", nuevo.Imagen);
+                datos.EjecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
 
     }
 }

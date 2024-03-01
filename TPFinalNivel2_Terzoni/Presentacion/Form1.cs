@@ -80,6 +80,23 @@ namespace Presentacion
             dgvArticulos.Columns["Id"].Visible = false;
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormularioAlta alta = new FormularioAlta();
+            alta.ShowDialog();
+            Cargar();
+        }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            //Articulo seleccionado;
+            //seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            //FormularioAlta modificar = new FormularioAlta(seleccionado);
+            //modificar.ShowDialog();
+            //Cargar();
+
+
+        }
     }
 }
