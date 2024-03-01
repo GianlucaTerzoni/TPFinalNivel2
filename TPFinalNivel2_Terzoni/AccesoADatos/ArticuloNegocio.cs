@@ -91,5 +91,35 @@ namespace Negocio
             }
         }
 
+
+        public void Modificar(Articulo articulo)
+        {
+            AccesoADatos datos = new AccesoADatos();
+
+            try
+            {
+                datos.SetearConsulta("Update ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, IdMarca = @IdMarca, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio, Descripcion = @Descripcion Where Id = @Id");
+                datos.SetearParametro("@Codigo", articulo.Codigo);
+                datos.SetearParametro("@Nombre", articulo.Nombre);
+                datos.SetearParametro("@IdMarca", articulo.Marca.Id);
+                datos.SetearParametro("@IdCategoria", articulo.Categoria.Id);
+                datos.SetearParametro("@ImagenUrl", articulo.Imagen);
+                datos.SetearParametro("@Precio", articulo.Precio);
+                datos.SetearParametro("@Descripcion", articulo.Descripcion);
+                datos.SetearParametro("@Id", articulo.Id);
+
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
     }
 }

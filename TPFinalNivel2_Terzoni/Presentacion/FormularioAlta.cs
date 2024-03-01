@@ -20,7 +20,13 @@ namespace Presentacion
         public FormularioAlta()
         {
             InitializeComponent();
-            this.articulo = new Articulo();
+
+        }
+        
+        public FormularioAlta(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
             Text = "Modificar Artículo";
         }
 
@@ -42,9 +48,18 @@ namespace Presentacion
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
                 articulo.Descripcion = txtDescripcion.Text;
 
+                if(articulo.Id != 0)
+                {
+                    negocio.Modificar(articulo);
+                    MessageBox.Show("Modificado exitosamente");
 
+                }
+                else
+                {
                 negocio.Agregar(articulo);
                 MessageBox.Show("Agregado exitosamente.");
+
+                }
 
                 Close();
 
@@ -59,6 +74,7 @@ namespace Presentacion
         {
             CategoriaNegocio categoria = new CategoriaNegocio();
             MarcaNegocio marca = new MarcaNegocio();
+            
 
             try
             {
@@ -69,6 +85,21 @@ namespace Presentacion
                 cboMarca.DataSource = marca.ListarMarca();
                 cboMarca.ValueMember = "Id";
                 cboMarca.DisplayMember = "Descripcion";
+
+
+
+                if(articulo != null)
+                {
+                    txtCodigo.Text = articulo.Codigo;
+                    txtNombre.Text = articulo.Nombre;
+                    cboMarca.SelectedValue = articulo.Marca.Id;
+                    cboCategoria.SelectedValue = articulo.Categoria.Id;
+                    txtImagen.Text = articulo.Imagen;
+                    CargarImagenAlta(articulo.Imagen);
+                    txtPrecio.Text = articulo.Precio.ToString();
+                    txtDescripcion.Text = articulo.Descripcion;
+
+                }
 
 
             }

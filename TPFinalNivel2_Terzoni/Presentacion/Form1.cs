@@ -89,13 +89,12 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //Articulo seleccionado;
-            //seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
-            //FormularioAlta modificar = new FormularioAlta(seleccionado);
-            //modificar.ShowDialog();
-            //Cargar();
-
+            FormularioAlta modificar = new FormularioAlta(seleccionado);
+            modificar.ShowDialog();
+            Cargar();
 
         }
     }
