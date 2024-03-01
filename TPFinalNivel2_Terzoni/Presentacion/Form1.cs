@@ -129,5 +129,25 @@ namespace Presentacion
                 MessageBox.Show("Error al intentar eliminar el articulo.");
             }
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = txtBuscar.Text;
+
+            if (filtro.Length >= 2)
+            {
+                listaFiltrada = listaArticulos.FindAll(i => i.Nombre.ToUpper().Contains(filtro.ToUpper()) || i.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            OcultarColumnas();
+
+        }
     }
 }
