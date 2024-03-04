@@ -248,5 +248,21 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+
+
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado;
+                seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                FormDetalle detalle = new FormDetalle(seleccionado);
+                detalle.ShowDialog();
+                Cargar();
+                
+            }
+        }
+
     }
 }

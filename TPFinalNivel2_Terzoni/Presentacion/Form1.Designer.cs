@@ -147,6 +147,7 @@
             this.btnDetalle.TabIndex = 10;
             this.btnDetalle.Text = "Ver detalle";
             this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // txtBuscar
             // 
