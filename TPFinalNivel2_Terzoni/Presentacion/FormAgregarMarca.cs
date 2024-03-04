@@ -26,6 +26,9 @@ namespace Presentacion
 
             try
             {
+                if (ValidarMarca())
+                    return;
+
 
                 if (marca == null)
                     marca = new Marca();
@@ -48,5 +51,18 @@ namespace Presentacion
                 MessageBox.Show("Error al intentar agregar la marca.");
             }
         }
+
+        private bool ValidarMarca()
+        {
+            if(txtAgregarMarca.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el nombre de la marca que desea agregar.");
+                return true;
+            }
+
+
+            return false;
+        }
+
     }
 }
