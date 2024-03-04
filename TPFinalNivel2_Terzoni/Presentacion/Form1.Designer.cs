@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCargarListaCompleta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +88,7 @@
             // 
             // btnFiltro
             // 
+            this.btnFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFiltro.Location = new System.Drawing.Point(174, 508);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(75, 23);
@@ -107,6 +109,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Location = new System.Drawing.Point(440, 421);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(125, 23);
@@ -117,6 +120,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Location = new System.Drawing.Point(580, 421);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(125, 23);
@@ -127,6 +131,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Location = new System.Drawing.Point(722, 421);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(125, 23);
@@ -201,11 +206,23 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Filtro";
             // 
+            // btnCargarListaCompleta
+            // 
+            this.btnCargarListaCompleta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCargarListaCompleta.Location = new System.Drawing.Point(753, 37);
+            this.btnCargarListaCompleta.Name = "btnCargarListaCompleta";
+            this.btnCargarListaCompleta.Size = new System.Drawing.Size(94, 23);
+            this.btnCargarListaCompleta.TabIndex = 17;
+            this.btnCargarListaCompleta.Text = "Cargar todo";
+            this.btnCargarListaCompleta.UseVisualStyleBackColor = true;
+            this.btnCargarListaCompleta.Click += new System.EventHandler(this.btnCargarListaCompleta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 551);
+            this.Controls.Add(this.btnCargarListaCompleta);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.label2);
@@ -251,6 +268,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCargarListaCompleta;
     }
 }
 

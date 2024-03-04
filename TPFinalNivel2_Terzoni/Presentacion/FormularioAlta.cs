@@ -180,5 +180,7 @@ namespace Presentacion
         {
             CargarImagenAlta(txtImagen.Text);
         }
+
+
     }
 }

@@ -264,5 +264,9 @@ namespace Presentacion
             }
         }
 
+        private void btnCargarListaCompleta_Click(object sender, EventArgs e)
+        {
+            Cargar();
+        }
     }
 }
