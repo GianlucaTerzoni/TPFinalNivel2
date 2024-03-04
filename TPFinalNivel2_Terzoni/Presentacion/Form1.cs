@@ -300,5 +300,12 @@ namespace Presentacion
             borrarMarca.ShowDialog();
             Cargar();
         }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            FormEliminarCategoria borrarCategoria = new FormEliminarCategoria();
+            borrarCategoria.ShowDialog();
+            Cargar();
+        }
     }
 }

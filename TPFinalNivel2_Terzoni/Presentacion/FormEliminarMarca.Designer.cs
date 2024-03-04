@@ -57,6 +57,7 @@
             // 
             // btnEliminarMarca
             // 
+            this.btnEliminarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarMarca.Location = new System.Drawing.Point(26, 270);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(75, 23);
@@ -67,6 +68,7 @@
             // 
             // btnCancelarEliminarMarca
             // 
+            this.btnCancelarEliminarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarEliminarMarca.Location = new System.Drawing.Point(125, 270);
             this.btnCancelarEliminarMarca.Name = "btnCancelarEliminarMarca";
             this.btnCancelarEliminarMarca.Size = new System.Drawing.Size(75, 23);
@@ -77,6 +79,7 @@
             // 
             // lbxMarcas
             // 
+            this.lbxMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbxMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxMarcas.FormattingEnabled = true;
             this.lbxMarcas.ItemHeight = 16;
@@ -96,6 +99,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormEliminarMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEliminarMarca";
             this.Load += new System.EventHandler(this.FormEliminarMarca_Load);
             this.ResumeLayout(false);

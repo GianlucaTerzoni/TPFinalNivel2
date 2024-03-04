@@ -57,7 +57,7 @@ namespace Presentacion
 
             try
             {
-                DialogResult respuesta = MessageBox.Show("¿Está seguro desea eliminarla?", "Eliminando Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminarla?", "Eliminando Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if(respuesta == DialogResult.Yes)
                 {
