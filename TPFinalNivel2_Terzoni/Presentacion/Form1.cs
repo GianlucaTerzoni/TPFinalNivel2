@@ -278,5 +278,12 @@ namespace Presentacion
         {
             Cargar();
         }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            FormAgregarMarca agregarMarca = new FormAgregarMarca();
+            agregarMarca.ShowDialog();
+            Cargar();
+        }
     }
 }

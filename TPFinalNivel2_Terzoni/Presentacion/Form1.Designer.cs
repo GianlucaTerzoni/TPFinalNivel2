@@ -44,6 +44,10 @@
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCargarListaCompleta = new System.Windows.Forms.Button();
+            this.btnAgregarMarca = new System.Windows.Forms.Button();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
+            this.btnEliminarMarca = new System.Windows.Forms.Button();
+            this.btnEliminarCategoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenArticulo)).BeginInit();
             this.SuspendLayout();
@@ -136,7 +140,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(125, 23);
             this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Eliminar Artículo";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -217,11 +221,52 @@
             this.btnCargarListaCompleta.UseVisualStyleBackColor = true;
             this.btnCargarListaCompleta.Click += new System.EventHandler(this.btnCargarListaCompleta_Click);
             // 
+            // btnAgregarMarca
+            // 
+            this.btnAgregarMarca.Location = new System.Drawing.Point(297, 461);
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.Size = new System.Drawing.Size(125, 23);
+            this.btnAgregarMarca.TabIndex = 18;
+            this.btnAgregarMarca.Text = "Agregar Marca";
+            this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
+            // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(440, 461);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(125, 23);
+            this.btnAgregarCategoria.TabIndex = 19;
+            this.btnAgregarCategoria.Text = "Agregar Categoría";
+            this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarMarca
+            // 
+            this.btnEliminarMarca.Location = new System.Drawing.Point(580, 461);
+            this.btnEliminarMarca.Name = "btnEliminarMarca";
+            this.btnEliminarMarca.Size = new System.Drawing.Size(125, 23);
+            this.btnEliminarMarca.TabIndex = 20;
+            this.btnEliminarMarca.Text = "Eliminar Marca";
+            this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarCategoria
+            // 
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(722, 461);
+            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(125, 23);
+            this.btnEliminarCategoria.TabIndex = 21;
+            this.btnEliminarCategoria.Text = "Eliminar Categoría";
+            this.btnEliminarCategoria.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 551);
+            this.Controls.Add(this.btnEliminarCategoria);
+            this.Controls.Add(this.btnEliminarMarca);
+            this.Controls.Add(this.btnAgregarCategoria);
+            this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.btnCargarListaCompleta);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtFiltro);
@@ -269,6 +314,10 @@
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCargarListaCompleta;
+        private System.Windows.Forms.Button btnAgregarMarca;
+        private System.Windows.Forms.Button btnAgregarCategoria;
+        private System.Windows.Forms.Button btnEliminarMarca;
+        private System.Windows.Forms.Button btnEliminarCategoria;
     }
 }
 

@@ -38,5 +38,26 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public void  AgregarMarca(Marca nuevo)
+        {
+            AccesoADatos datos = new AccesoADatos();
+
+            try
+            {
+                datos.SetearConsulta("Insert into MARCAS (Descripcion) values (@Descripcion)");
+                datos.SetearParametro("@Descripcion", nuevo.Descripcion);
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
     }
 }
