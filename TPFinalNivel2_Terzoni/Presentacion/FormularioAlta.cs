@@ -36,6 +36,9 @@ namespace Presentacion
 
             try
             {
+                if (ValidacionAgregar())
+                    return;
+
 
                 if (articulo == null)
                     articulo = new Articulo();
@@ -48,7 +51,9 @@ namespace Presentacion
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
                 articulo.Descripcion = txtDescripcion.Text;
 
-                if(articulo.Id != 0)
+
+
+                if (articulo.Id != 0)
                 {
                     negocio.Modificar(articulo);
                     MessageBox.Show("Modificado exitosamente");
@@ -68,6 +73,56 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private bool ValidacionAgregar()
+        {
+            if(txtCodigo.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un código para el producto.");
+                return true;
+            }
+            if(txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el nombre del producto.");
+                return true;
+            }
+            if (cboCategoria.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una categoría para el producto.");
+                return true;
+            }
+            if (cboMarca.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar la marca del producto.");
+                return true;
+            }
+            if (txtPrecio.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un precio para el producto.");
+                return true;
+            }
+            if (!(SoloNumeros(txtPrecio.Text)))
+            {
+                MessageBox.Show("Debe ingresar solo valores numéricos.");
+                txtPrecio.Text = "";
+                return true;
+            }
+          
+            return false;
+        }
+
+
+        private bool SoloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+
+                    return false;
+            }
+
+            return true;
         }
 
         private void FormularioAlta_Load(object sender, EventArgs e)
@@ -101,7 +156,6 @@ namespace Presentacion
 
                 }
 
-
             }
             catch (Exception ex)
             {
@@ -114,7 +168,6 @@ namespace Presentacion
             try
             {
                 pbxImagenAlta.Load(imagen);
-
 
             }
             catch (Exception)

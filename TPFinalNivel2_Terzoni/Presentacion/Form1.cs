@@ -179,8 +179,6 @@ namespace Presentacion
         private bool ValidarFiltroAvanzado()
         {
 
-
-
             if (cboCampo.SelectedIndex < 0)
             {
                 MessageBox.Show("Por favor, seleccione el campo.");
@@ -207,7 +205,6 @@ namespace Presentacion
                     txtFiltro.Text = "";
                     return true;
                 }
-
 
             }
 
