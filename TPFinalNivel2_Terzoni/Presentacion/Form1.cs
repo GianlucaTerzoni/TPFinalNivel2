@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Negocio;
 using Dominio;
 using System.Security.AccessControl;
+using System.Globalization;
 
 namespace Presentacion
 {
@@ -206,6 +207,7 @@ namespace Presentacion
                     return true;
                 }
 
+
             }
 
             return false;
@@ -216,12 +218,16 @@ namespace Presentacion
         {
             foreach (char caracter in cadena)
             {
-                if (!(char.IsNumber(caracter)))
+                if (!(char.IsNumber(caracter)) && caracter != '.')
                 
-                    return false;               
+                    return false;
+              
             }
+                
+            decimal number;
 
-          return true;
+            
+            return Decimal.TryParse(cadena, NumberStyles.Any, CultureInfo.InvariantCulture, out number);
         }
 
         private void btnFiltro_Click(object sender, EventArgs e)
