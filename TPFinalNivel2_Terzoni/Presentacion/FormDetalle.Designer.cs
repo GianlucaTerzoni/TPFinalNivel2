@@ -230,7 +230,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormDetalle";
-            this.Text = "FormDetalle";
+            this.Text = "Detalle";
             this.Load += new System.EventHandler(this.FormDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxDetalle)).EndInit();
             this.ResumeLayout(false);

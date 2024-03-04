@@ -156,7 +156,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(102, 39);
+            this.txtBuscar.Location = new System.Drawing.Point(76, 39);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(174, 20);
             this.txtBuscar.TabIndex = 11;
@@ -165,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 42);
+            this.label3.Location = new System.Drawing.Point(20, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 12;
@@ -209,9 +209,9 @@
             // btnCargarListaCompleta
             // 
             this.btnCargarListaCompleta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargarListaCompleta.Location = new System.Drawing.Point(753, 37);
+            this.btnCargarListaCompleta.Location = new System.Drawing.Point(297, 421);
             this.btnCargarListaCompleta.Name = "btnCargarListaCompleta";
-            this.btnCargarListaCompleta.Size = new System.Drawing.Size(94, 23);
+            this.btnCargarListaCompleta.Size = new System.Drawing.Size(125, 22);
             this.btnCargarListaCompleta.TabIndex = 17;
             this.btnCargarListaCompleta.Text = "Cargar todo";
             this.btnCargarListaCompleta.UseVisualStyleBackColor = true;
