@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Dominio;
+using System.Security.AccessControl;
 
 namespace Presentacion
 {
@@ -175,12 +176,67 @@ namespace Presentacion
             }
         }
 
+        private bool ValidarFiltroAvanzado()
+        {
+
+
+
+            if (cboCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el campo.");
+                return true;
+            }
+
+            if(cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el criterio.");
+                return true;
+            }
+
+            if(cboCampo.Text == "Precio")
+            {
+                if (string.IsNullOrEmpty(txtFiltro.Text))
+                {
+                    MessageBox.Show("Debe ingresar al menos un valor numérico. ");
+                    return true;
+                }
+
+                if (!(SoloNumeros(txtFiltro.Text)))
+                {
+                    MessageBox.Show("Debe ingresar solo valores numéricos.");
+                    txtFiltro.Text = "";
+                    return true;
+                }
+
+
+            }
+
+            return false;
+        }
+
+
+        private bool SoloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                
+                    return false;               
+            }
+
+          return true;
+        }
+
         private void btnFiltro_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
+
+                if (ValidarFiltroAvanzado())
+                    return;
+
 
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
@@ -192,7 +248,6 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
         }
