@@ -56,6 +56,12 @@ namespace Presentacion
             try
             {
                 listaArticulos = negocio.Listar();
+                foreach (var articulo in listaArticulos)
+                {
+                    articulo.Precio = Math.Round(articulo.Precio, 2);
+
+                }
+
                 dgvArticulos.DataSource = listaArticulos;
                 OcultarColumnas();
                 CargarImagen(listaArticulos[0].Imagen);
@@ -225,8 +231,6 @@ namespace Presentacion
             }
                 
             decimal number;
-
-            
             return Decimal.TryParse(cadena, NumberStyles.Any, CultureInfo.InvariantCulture, out number);
         }
 
