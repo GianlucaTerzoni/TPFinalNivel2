@@ -181,6 +181,9 @@ namespace Presentacion
             CargarImagenAlta(txtImagen.Text);
         }
 
-
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

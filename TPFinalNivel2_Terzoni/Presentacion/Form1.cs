@@ -12,6 +12,7 @@ using Negocio;
 using Dominio;
 using System.Security.AccessControl;
 using System.Globalization;
+using Microsoft.VisualBasic;
 
 namespace Presentacion
 {
@@ -283,6 +284,20 @@ namespace Presentacion
         {
             FormAgregarMarca agregarMarca = new FormAgregarMarca();
             agregarMarca.ShowDialog();
+            Cargar();
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            AgregarCategoria categoria = new AgregarCategoria();
+            categoria.ShowDialog();
+            Cargar();
+        }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            FormEliminarMarca borrarMarca = new FormEliminarMarca();
+            borrarMarca.ShowDialog();
             Cargar();
         }
     }

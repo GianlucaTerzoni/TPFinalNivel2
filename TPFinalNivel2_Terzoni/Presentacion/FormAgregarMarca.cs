@@ -42,7 +42,6 @@ namespace Presentacion
                     MessageBox.Show("Agregado exitosamente.");
                 }
 
-
                 Close();
             }
             catch (Exception)
@@ -60,9 +59,12 @@ namespace Presentacion
                 return true;
             }
 
-
             return false;
         }
 
+        private void btnCancelarMarca_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

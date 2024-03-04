@@ -239,6 +239,7 @@
             this.btnAgregarCategoria.TabIndex = 19;
             this.btnAgregarCategoria.Text = "Agregar Categoría";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // btnEliminarMarca
             // 
@@ -248,6 +249,7 @@
             this.btnEliminarMarca.TabIndex = 20;
             this.btnEliminarMarca.Text = "Eliminar Marca";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // btnEliminarCategoria
             // 

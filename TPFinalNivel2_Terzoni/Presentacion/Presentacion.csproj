@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCategoria.Designer.cs">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +71,12 @@
     <Compile Include="FormDetalle.Designer.cs">
       <DependentUpon>FormDetalle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminarMarca.Designer.cs">
+      <DependentUpon>FormEliminarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioAlta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarCategoria.resx">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetalle.resx">
       <DependentUpon>FormDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEliminarMarca.resx">
+      <DependentUpon>FormEliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAlta.resx">
       <DependentUpon>FormularioAlta.cs</DependentUpon>

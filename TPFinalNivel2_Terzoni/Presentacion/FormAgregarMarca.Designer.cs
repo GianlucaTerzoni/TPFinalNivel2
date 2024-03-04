@@ -70,6 +70,7 @@
             this.btnCancelarMarca.TabIndex = 3;
             this.btnCancelarMarca.Text = "Cancelar";
             this.btnCancelarMarca.UseVisualStyleBackColor = true;
+            this.btnCancelarMarca.Click += new System.EventHandler(this.btnCancelarMarca_Click);
             // 
             // label2
             // 
