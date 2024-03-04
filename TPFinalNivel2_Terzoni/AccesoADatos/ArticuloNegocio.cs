@@ -137,5 +137,115 @@ namespace Negocio
             }
 
         }
+
+
+        public List<Articulo> Filtrar( string campo,string criterio, string filtro)
+        {
+            List <Articulo> lista = new List <Articulo>();
+            AccesoADatos datos = new AccesoADatos();
+
+            try
+            {
+                string consulta = ("Select A.Id, Codigo, Nombre, A.Descripcion, ImagenUrl, Precio, C.Id AS IdCategoria, C.Descripcion AS Categoria, M.Id AS IdMarca, M.Descripcion AS Marca From ARTICULOS A, CATEGORIAS C, MARCAS M Where C.Id = A.IdCategoria AND M.Id = A.IdMarca AND ");
+                
+                if (campo == "Precio")
+                {
+
+                    switch (criterio)
+                    {
+                        case "Menor a":
+                            consulta += "Precio < " + filtro;
+                            break;
+
+                        case "Mayor a":
+                            consulta += "Precio > " + filtro;
+                            break;
+
+                        default:
+                            consulta += "Precio = " + filtro;
+                            break;
+
+                    }
+
+                }else if (campo == "Marca")
+                {
+                    switch (criterio)
+                    {
+
+                        case "Comienza con":
+                            consulta += "M.Descripcion like '" + filtro + "%'";
+                            break;
+
+                        case "Termina con":
+                            consulta += "M.Descripcion like '%" + filtro + "'";
+                            break;
+
+                        default:
+                            consulta += "M.Descripcion like '%" + filtro + "%'";
+                            break;
+
+                    }
+                }
+                else
+                {
+                    switch (criterio)
+                    {
+
+                        case "Comienza con":
+                            consulta += "C.Descripcion like '" + filtro + "%'";
+                            break;
+
+                        case "Termina con":
+                            consulta += "C.Descripcion like '%" + filtro + "'";
+                            break;
+
+                        default:
+                            consulta += "C.Descripcion like '%" + filtro + "%'";
+                            break;
+
+                    }
+                }
+
+
+                datos.SetearConsulta(consulta);
+                datos.EjecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.Imagen = (string)datos.Lector["ImagenUrl"];
+
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+
+                    lista.Add(aux);
+                }
+
+
+
+            return lista;
+            }
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
     }
 }
