@@ -38,55 +38,69 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 32);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(30, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 16);
+            this.label1.Size = new System.Drawing.Size(278, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrese el nombre de la categoría ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 48);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(30, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 16);
+            this.label2.Size = new System.Drawing.Size(165, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "que desea agregar:";
             // 
             // btnAceptarCategoria
             // 
-            this.btnAceptarCategoria.Location = new System.Drawing.Point(34, 113);
+            this.btnAceptarCategoria.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAceptarCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAceptarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptarCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnAceptarCategoria.Location = new System.Drawing.Point(54, 123);
             this.btnAceptarCategoria.Name = "btnAceptarCategoria";
-            this.btnAceptarCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptarCategoria.Size = new System.Drawing.Size(79, 30);
             this.btnAceptarCategoria.TabIndex = 7;
             this.btnAceptarCategoria.Text = "Aceptar";
-            this.btnAceptarCategoria.UseVisualStyleBackColor = true;
+            this.btnAceptarCategoria.UseVisualStyleBackColor = false;
             this.btnAceptarCategoria.Click += new System.EventHandler(this.btnAceptarCategoria_Click);
             // 
             // btnCancelarCategoria
             // 
-            this.btnCancelarCategoria.Location = new System.Drawing.Point(137, 113);
+            this.btnCancelarCategoria.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCancelarCategoria.FlatAppearance.BorderSize = 0;
+            this.btnCancelarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarCategoria.Location = new System.Drawing.Point(150, 123);
             this.btnCancelarCategoria.Name = "btnCancelarCategoria";
-            this.btnCancelarCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarCategoria.Size = new System.Drawing.Size(79, 29);
             this.btnCancelarCategoria.TabIndex = 8;
             this.btnCancelarCategoria.Text = "Cancelar";
-            this.btnCancelarCategoria.UseVisualStyleBackColor = true;
+            this.btnCancelarCategoria.UseVisualStyleBackColor = false;
             this.btnCancelarCategoria.Click += new System.EventHandler(this.btnCancelarCategoria_Click);
             // 
             // txtAgregarCategoria
             // 
-            this.txtAgregarCategoria.Location = new System.Drawing.Point(34, 76);
+            this.txtAgregarCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgregarCategoria.Location = new System.Drawing.Point(34, 71);
             this.txtAgregarCategoria.Name = "txtAgregarCategoria";
-            this.txtAgregarCategoria.Size = new System.Drawing.Size(178, 20);
+            this.txtAgregarCategoria.Size = new System.Drawing.Size(227, 27);
             this.txtAgregarCategoria.TabIndex = 9;
             // 
             // AgregarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 166);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.ClientSize = new System.Drawing.Size(316, 191);
             this.Controls.Add(this.txtAgregarCategoria);
             this.Controls.Add(this.btnCancelarCategoria);
             this.Controls.Add(this.btnAceptarCategoria);
