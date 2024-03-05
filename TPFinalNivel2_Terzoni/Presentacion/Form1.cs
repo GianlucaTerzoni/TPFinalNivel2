@@ -35,7 +35,6 @@ namespace Presentacion
             cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Categoría");
 
-
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -60,10 +59,11 @@ namespace Presentacion
                 foreach (var articulo in listaArticulos)
                 {
                     articulo.Precio = Math.Round(articulo.Precio, 2);
-
+                    
                 }
 
                 dgvArticulos.DataSource = listaArticulos;
+                
                 OcultarColumnas();
                 CargarImagen(listaArticulos[0].Imagen);
 
@@ -92,6 +92,7 @@ namespace Presentacion
         {
             dgvArticulos.Columns["Imagen"].Visible = false;
             dgvArticulos.Columns["Id"].Visible = false;
+    
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -214,7 +215,6 @@ namespace Presentacion
                     return true;
                 }
 
-
             }
 
             return false;
@@ -225,7 +225,7 @@ namespace Presentacion
         {
             foreach (char caracter in cadena)
             {
-                if (!(char.IsNumber(caracter)) && caracter != '.')
+                if (!(char.IsNumber(caracter)) && caracter != '.' && caracter != ',')
                 
                     return false;
               
@@ -239,9 +239,14 @@ namespace Presentacion
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
+            foreach (var articulo in listaArticulos)
+            {
+                articulo.Precio = Math.Round(articulo.Precio, 2);
+
+            }
+
             try
             {
-
                 if (ValidarFiltroAvanzado())
                     return;
 
@@ -250,10 +255,12 @@ namespace Presentacion
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltro.Text;
 
+
                 dgvArticulos.DataSource = negocio.Filtrar(campo, criterio, filtro);
 
 
             }
+            
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());

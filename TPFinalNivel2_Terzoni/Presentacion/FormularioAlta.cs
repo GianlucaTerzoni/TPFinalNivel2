@@ -117,7 +117,7 @@ namespace Presentacion
         {
             foreach (char caracter in cadena)
             {
-                if (!(char.IsNumber(caracter)) && caracter != '.')
+                if (!(char.IsNumber(caracter)) && caracter != '.' && caracter != ',')
 
                     return false;
             }
@@ -151,7 +151,7 @@ namespace Presentacion
                     cboCategoria.SelectedValue = articulo.Categoria.Id;
                     txtImagen.Text = articulo.Imagen;
                     CargarImagenAlta(articulo.Imagen);
-                    txtPrecio.Text = articulo.Precio.ToString();
+                    txtPrecio.Text = articulo.Precio.ToString("#,##0.00");
                     txtDescripcion.Text = articulo.Descripcion;
 
                 }

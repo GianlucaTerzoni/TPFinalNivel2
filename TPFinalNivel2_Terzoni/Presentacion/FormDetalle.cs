@@ -38,11 +38,11 @@ namespace Presentacion
                     lblID.Text= articulo.Id.ToString();
                     lblCodigo.Text = articulo.Codigo;
                     lblNombre.Text = articulo.Nombre;
-                    lblMarca.Text = articulo.Marca.Id.ToString();
-                    lblCategoria.Text = articulo.Categoria.Id.ToString();
+                    lblMarca.Text = articulo.Marca.Descripcion;
+                    lblCategoria.Text = articulo.Categoria.Descripcion;
                     lblImagen.Text = articulo.Imagen;
                     CargarImagenAlta(articulo.Imagen);
-                    lblPrecio.Text = articulo.Precio.ToString();
+                    lblPrecio.Text = "$"+articulo.Precio.ToString("#,##0.00");
                     lblDescripcion.Text = articulo.Descripcion;
                 }
 
@@ -67,10 +67,7 @@ namespace Presentacion
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
 
-        }
 
 
     }
