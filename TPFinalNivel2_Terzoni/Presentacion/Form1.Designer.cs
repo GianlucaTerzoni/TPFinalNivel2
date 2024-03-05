@@ -115,10 +115,11 @@
             // 
             // cboCampo
             // 
+            this.cboCampo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCampo.FormattingEnabled = true;
             this.cboCampo.Location = new System.Drawing.Point(76, 416);
             this.cboCampo.Name = "cboCampo";
-            this.cboCampo.Size = new System.Drawing.Size(174, 21);
+            this.cboCampo.Size = new System.Drawing.Size(174, 25);
             this.cboCampo.TabIndex = 2;
             this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
@@ -136,44 +137,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 421);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(2, 420);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Campo";
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.Location = new System.Drawing.Point(440, 421);
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(440, 416);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(125, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(125, 49);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.Location = new System.Drawing.Point(580, 421);
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(580, 416);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(125, 23);
+            this.btnModificar.Size = new System.Drawing.Size(125, 49);
             this.btnModificar.TabIndex = 8;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.Location = new System.Drawing.Point(722, 421);
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(722, 415);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(125, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(125, 49);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar Artículo";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnDetalle
@@ -192,111 +209,145 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(76, 39);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(174, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(174, 23);
             this.txtBuscar.TabIndex = 11;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 42);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(11, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 12;
             this.label3.Text = "Buscar";
             // 
             // cboCriterio
             // 
+            this.cboCriterio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCriterio.FormattingEnabled = true;
             this.cboCriterio.Location = new System.Drawing.Point(76, 447);
             this.cboCriterio.Name = "cboCriterio";
-            this.cboCriterio.Size = new System.Drawing.Size(173, 21);
+            this.cboCriterio.Size = new System.Drawing.Size(173, 25);
             this.cboCriterio.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 452);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(4, 447);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(66, 21);
             this.label2.TabIndex = 14;
             this.label2.Text = "Criterio";
             // 
             // txtFiltro
             // 
+            this.txtFiltro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltro.Location = new System.Drawing.Point(76, 482);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(173, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(173, 23);
             this.txtFiltro.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 485);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(24, 479);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.Size = new System.Drawing.Size(46, 21);
             this.label4.TabIndex = 16;
             this.label4.Text = "Filtro";
             // 
             // btnCargarListaCompleta
             // 
+            this.btnCargarListaCompleta.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCargarListaCompleta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargarListaCompleta.Location = new System.Drawing.Point(297, 421);
+            this.btnCargarListaCompleta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnCargarListaCompleta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargarListaCompleta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarListaCompleta.ForeColor = System.Drawing.Color.White;
+            this.btnCargarListaCompleta.Location = new System.Drawing.Point(297, 416);
             this.btnCargarListaCompleta.Name = "btnCargarListaCompleta";
-            this.btnCargarListaCompleta.Size = new System.Drawing.Size(125, 22);
+            this.btnCargarListaCompleta.Size = new System.Drawing.Size(127, 49);
             this.btnCargarListaCompleta.TabIndex = 17;
             this.btnCargarListaCompleta.Text = "Cargar todo";
-            this.btnCargarListaCompleta.UseVisualStyleBackColor = true;
+            this.btnCargarListaCompleta.UseVisualStyleBackColor = false;
             this.btnCargarListaCompleta.Click += new System.EventHandler(this.btnCargarListaCompleta_Click);
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(297, 461);
+            this.btnAgregarMarca.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgregarMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMarca.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMarca.Location = new System.Drawing.Point(297, 474);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(125, 23);
+            this.btnAgregarMarca.Size = new System.Drawing.Size(125, 47);
             this.btnAgregarMarca.TabIndex = 18;
             this.btnAgregarMarca.Text = "Agregar Marca";
-            this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.UseVisualStyleBackColor = false;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // btnAgregarCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(440, 461);
+            this.btnAgregarCategoria.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgregarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(440, 474);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(125, 23);
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(125, 47);
             this.btnAgregarCategoria.TabIndex = 19;
             this.btnAgregarCategoria.Text = "Agregar Categoría";
-            this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.btnAgregarCategoria.UseVisualStyleBackColor = false;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(580, 461);
+            this.btnEliminarMarca.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEliminarMarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnEliminarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarMarca.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarMarca.Location = new System.Drawing.Point(580, 473);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
-            this.btnEliminarMarca.Size = new System.Drawing.Size(125, 23);
+            this.btnEliminarMarca.Size = new System.Drawing.Size(125, 48);
             this.btnEliminarMarca.TabIndex = 20;
             this.btnEliminarMarca.Text = "Eliminar Marca";
-            this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            this.btnEliminarMarca.UseVisualStyleBackColor = false;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // btnEliminarCategoria
             // 
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(722, 461);
+            this.btnEliminarCategoria.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(722, 472);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(125, 23);
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(125, 50);
             this.btnEliminarCategoria.TabIndex = 21;
             this.btnEliminarCategoria.Text = "Eliminar Categoría";
-            this.btnEliminarCategoria.UseVisualStyleBackColor = true;
+            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
             this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(1247, 551);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnEliminarMarca);
