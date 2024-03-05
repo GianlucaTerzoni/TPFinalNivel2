@@ -63,7 +63,7 @@
             this.btnAceptarMarca.ForeColor = System.Drawing.Color.White;
             this.btnAceptarMarca.Location = new System.Drawing.Point(61, 131);
             this.btnAceptarMarca.Name = "btnAceptarMarca";
-            this.btnAceptarMarca.Size = new System.Drawing.Size(93, 23);
+            this.btnAceptarMarca.Size = new System.Drawing.Size(93, 31);
             this.btnAceptarMarca.TabIndex = 2;
             this.btnAceptarMarca.Text = "Aceptar";
             this.btnAceptarMarca.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             this.btnCancelarMarca.ForeColor = System.Drawing.Color.White;
             this.btnCancelarMarca.Location = new System.Drawing.Point(160, 131);
             this.btnCancelarMarca.Name = "btnCancelarMarca";
-            this.btnCancelarMarca.Size = new System.Drawing.Size(93, 23);
+            this.btnCancelarMarca.Size = new System.Drawing.Size(93, 31);
             this.btnCancelarMarca.TabIndex = 3;
             this.btnCancelarMarca.Text = "Cancelar";
             this.btnCancelarMarca.UseVisualStyleBackColor = false;
