@@ -130,7 +130,7 @@
             this.pbxDetalle.Location = new System.Drawing.Point(470, 26);
             this.pbxDetalle.Name = "pbxDetalle";
             this.pbxDetalle.Size = new System.Drawing.Size(229, 259);
-            this.pbxDetalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxDetalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxDetalle.TabIndex = 7;
             this.pbxDetalle.TabStop = false;
             // 

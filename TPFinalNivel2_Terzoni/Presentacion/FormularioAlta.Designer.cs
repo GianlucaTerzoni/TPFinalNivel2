@@ -83,9 +83,11 @@
             // 
             // pbxImagenAlta
             // 
+            this.pbxImagenAlta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxImagenAlta.Location = new System.Drawing.Point(381, 16);
             this.pbxImagenAlta.Name = "pbxImagenAlta";
             this.pbxImagenAlta.Size = new System.Drawing.Size(211, 225);
+            this.pbxImagenAlta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagenAlta.TabIndex = 6;
             this.pbxImagenAlta.TabStop = false;
             // 
