@@ -117,7 +117,7 @@ namespace Presentacion
         {
             foreach (char caracter in cadena)
             {
-                if (!(char.IsNumber(caracter)))
+                if (!(char.IsNumber(caracter)) && caracter != '.')
 
                     return false;
             }

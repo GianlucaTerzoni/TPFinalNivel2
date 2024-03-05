@@ -66,5 +66,12 @@ namespace Presentacion
                 pbxDetalle.Load("https://editorial.unc.edu.ar/wp-content/uploads/sites/33/2022/09/placeholder.png");
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
