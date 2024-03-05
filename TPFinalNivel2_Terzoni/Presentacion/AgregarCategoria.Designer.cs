@@ -64,7 +64,7 @@
             this.btnAceptarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnAceptarCategoria.Location = new System.Drawing.Point(54, 123);
+            this.btnAceptarCategoria.Location = new System.Drawing.Point(72, 134);
             this.btnAceptarCategoria.Name = "btnAceptarCategoria";
             this.btnAceptarCategoria.Size = new System.Drawing.Size(79, 30);
             this.btnAceptarCategoria.TabIndex = 7;
@@ -79,9 +79,9 @@
             this.btnCancelarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarCategoria.Location = new System.Drawing.Point(150, 123);
+            this.btnCancelarCategoria.Location = new System.Drawing.Point(166, 134);
             this.btnCancelarCategoria.Name = "btnCancelarCategoria";
-            this.btnCancelarCategoria.Size = new System.Drawing.Size(79, 29);
+            this.btnCancelarCategoria.Size = new System.Drawing.Size(79, 30);
             this.btnCancelarCategoria.TabIndex = 8;
             this.btnCancelarCategoria.Text = "Cancelar";
             this.btnCancelarCategoria.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             // txtAgregarCategoria
             // 
             this.txtAgregarCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgregarCategoria.Location = new System.Drawing.Point(34, 71);
+            this.txtAgregarCategoria.Location = new System.Drawing.Point(48, 82);
             this.txtAgregarCategoria.Name = "txtAgregarCategoria";
             this.txtAgregarCategoria.Size = new System.Drawing.Size(227, 27);
             this.txtAgregarCategoria.TabIndex = 9;
@@ -100,12 +100,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(316, 191);
+            this.ClientSize = new System.Drawing.Size(316, 206);
             this.Controls.Add(this.txtAgregarCategoria);
             this.Controls.Add(this.btnCancelarCategoria);
             this.Controls.Add(this.btnAceptarCategoria);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(332, 245);
+            this.MinimumSize = new System.Drawing.Size(332, 245);
             this.Name = "AgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Categoria";

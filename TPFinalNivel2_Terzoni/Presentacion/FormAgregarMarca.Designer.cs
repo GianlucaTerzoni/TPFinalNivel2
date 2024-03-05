@@ -100,12 +100,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(320, 187);
+            this.ClientSize = new System.Drawing.Size(316, 204);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelarMarca);
             this.Controls.Add(this.btnAceptarMarca);
             this.Controls.Add(this.txtAgregarMarca);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(332, 243);
+            this.MinimumSize = new System.Drawing.Size(332, 243);
             this.Name = "FormAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Marca";

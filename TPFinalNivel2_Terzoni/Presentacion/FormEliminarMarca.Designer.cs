@@ -65,7 +65,7 @@
             this.btnEliminarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarMarca.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarMarca.Location = new System.Drawing.Point(42, 270);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(72, 267);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(83, 29);
             this.btnEliminarMarca.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.btnCancelarEliminarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarEliminarMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarEliminarMarca.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarEliminarMarca.Location = new System.Drawing.Point(140, 270);
+            this.btnCancelarEliminarMarca.Location = new System.Drawing.Point(170, 267);
             this.btnCancelarEliminarMarca.Name = "btnCancelarEliminarMarca";
             this.btnCancelarEliminarMarca.Size = new System.Drawing.Size(83, 29);
             this.btnCancelarEliminarMarca.TabIndex = 4;
@@ -97,8 +97,9 @@
             this.lbxMarcas.ForeColor = System.Drawing.Color.White;
             this.lbxMarcas.FormattingEnabled = true;
             this.lbxMarcas.ItemHeight = 21;
-            this.lbxMarcas.Location = new System.Drawing.Point(27, 77);
+            this.lbxMarcas.Location = new System.Drawing.Point(55, 78);
             this.lbxMarcas.Name = "lbxMarcas";
+            this.lbxMarcas.ScrollAlwaysVisible = true;
             this.lbxMarcas.Size = new System.Drawing.Size(223, 172);
             this.lbxMarcas.TabIndex = 5;
             // 
@@ -113,6 +114,8 @@
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(351, 382);
+            this.MinimumSize = new System.Drawing.Size(351, 382);
             this.Name = "FormEliminarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEliminarMarca";

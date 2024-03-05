@@ -43,9 +43,10 @@
             this.lbxCategoria.ForeColor = System.Drawing.Color.White;
             this.lbxCategoria.FormattingEnabled = true;
             this.lbxCategoria.ItemHeight = 21;
-            this.lbxCategoria.Location = new System.Drawing.Point(40, 81);
+            this.lbxCategoria.Location = new System.Drawing.Point(54, 80);
             this.lbxCategoria.Name = "lbxCategoria";
-            this.lbxCategoria.Size = new System.Drawing.Size(189, 172);
+            this.lbxCategoria.ScrollAlwaysVisible = true;
+            this.lbxCategoria.Size = new System.Drawing.Size(223, 172);
             this.lbxCategoria.TabIndex = 10;
             // 
             // btnCancelarEliminarCategoria
@@ -56,7 +57,7 @@
             this.btnCancelarEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarEliminarCategoria.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarEliminarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarEliminarCategoria.Location = new System.Drawing.Point(143, 268);
+            this.btnCancelarEliminarCategoria.Location = new System.Drawing.Point(165, 268);
             this.btnCancelarEliminarCategoria.Name = "btnCancelarEliminarCategoria";
             this.btnCancelarEliminarCategoria.Size = new System.Drawing.Size(75, 31);
             this.btnCancelarEliminarCategoria.TabIndex = 9;
@@ -72,7 +73,7 @@
             this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCategoria.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(44, 268);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(73, 268);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(75, 31);
             this.btnEliminarCategoria.TabIndex = 8;
@@ -85,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(36, 46);
+            this.label2.Location = new System.Drawing.Point(50, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 21);
             this.label2.TabIndex = 7;
@@ -96,7 +97,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(36, 25);
+            this.label1.Location = new System.Drawing.Point(50, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 21);
             this.label1.TabIndex = 6;
@@ -107,12 +108,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(306, 344);
+            this.ClientSize = new System.Drawing.Size(335, 343);
             this.Controls.Add(this.lbxCategoria);
             this.Controls.Add(this.btnCancelarEliminarCategoria);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(351, 382);
+            this.MinimumSize = new System.Drawing.Size(351, 382);
             this.Name = "FormEliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Categoría";

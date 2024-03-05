@@ -127,6 +127,7 @@
             // 
             // pbxDetalle
             // 
+            this.pbxDetalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxDetalle.Location = new System.Drawing.Point(470, 26);
             this.pbxDetalle.Name = "pbxDetalle";
             this.pbxDetalle.Size = new System.Drawing.Size(229, 259);
@@ -254,6 +255,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(782, 396);
+            this.MinimumSize = new System.Drawing.Size(782, 396);
             this.Name = "FormDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle";

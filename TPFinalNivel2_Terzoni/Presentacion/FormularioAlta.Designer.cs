@@ -249,6 +249,8 @@
             this.Controls.Add(this.txtImagen);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
+            this.MaximumSize = new System.Drawing.Size(656, 425);
+            this.MinimumSize = new System.Drawing.Size(656, 425);
             this.Name = "FormularioAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículo";
