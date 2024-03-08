@@ -59,7 +59,7 @@ namespace Presentacion
                 foreach (var articulo in listaArticulos)
                 {
                     articulo.Precio = Math.Round(articulo.Precio, 2);
-                    
+                    string precioFormateado = articulo.Precio.ToString("0.00");
                 }
 
                 dgvArticulos.DataSource = listaArticulos;
@@ -181,8 +181,9 @@ namespace Presentacion
                 cboCriterio.Items.Add("Comienza con");
                 cboCriterio.Items.Add("Termina con");
                 cboCriterio.Items.Add("Contiene");
+                
+            }        
 
-            }
         }
 
         private bool ValidarFiltroAvanzado()
@@ -221,16 +222,17 @@ namespace Presentacion
         }
 
 
+
         private bool SoloNumeros(string cadena)
         {
             foreach (char caracter in cadena)
             {
-                if (!(char.IsNumber(caracter)) && caracter != '.' && caracter != ',')
-                
+                if (!(char.IsNumber(caracter)))
+
                     return false;
-              
+
             }
-                
+
             decimal number;
             return Decimal.TryParse(cadena, NumberStyles.Any, CultureInfo.InvariantCulture, out number);
         }
@@ -239,11 +241,6 @@ namespace Presentacion
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
-            foreach (var articulo in listaArticulos)
-            {
-                articulo.Precio = Math.Round(articulo.Precio, 2);
-
-            }
 
             try
             {
@@ -255,9 +252,10 @@ namespace Presentacion
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltro.Text;
 
+                
 
                 dgvArticulos.DataSource = negocio.Filtrar(campo, criterio, filtro);
-
+                
 
             }
             
