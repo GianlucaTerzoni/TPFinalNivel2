@@ -13,6 +13,7 @@ using Dominio;
 using System.Security.AccessControl;
 using System.Globalization;
 using Microsoft.VisualBasic;
+using Microsoft.SqlServer.Server;
 
 namespace Presentacion
 {
@@ -34,6 +35,15 @@ namespace Presentacion
             cboCampo.Items.Add("Precio");
             cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Categoría");
+
+            DataGridViewColumn columnaPrecio = dgvArticulos.Columns["Precio"];
+
+
+            if (columnaPrecio != null)
+            {
+
+                columnaPrecio.DefaultCellStyle.Format = "#,0.##";
+            }
 
         }
 
@@ -59,8 +69,9 @@ namespace Presentacion
                 foreach (var articulo in listaArticulos)
                 {
                     articulo.Precio = Math.Round(articulo.Precio, 2);
-                    string precioFormateado = articulo.Precio.ToString("0.00");
+
                 }
+
 
                 dgvArticulos.DataSource = listaArticulos;
                 
@@ -92,7 +103,9 @@ namespace Presentacion
         {
             dgvArticulos.Columns["Imagen"].Visible = false;
             dgvArticulos.Columns["Id"].Visible = false;
-    
+            
+
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -166,14 +179,15 @@ namespace Presentacion
         private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opcion = cboCampo.SelectedItem.ToString();
+            
 
-            if(opcion == "Precio")
+            if (opcion == "Precio")
             {
                 cboCriterio.Items.Clear();
                 cboCriterio.Items.Add("Menor a");
                 cboCriterio.Items.Add("Mayor a");
                 cboCriterio.Items.Add("Igual a");
-
+                
             }
             else
             {
@@ -221,8 +235,6 @@ namespace Presentacion
             return false;
         }
 
-
-
         private bool SoloNumeros(string cadena)
         {
             foreach (char caracter in cadena)
@@ -235,6 +247,7 @@ namespace Presentacion
 
             decimal number;
             return Decimal.TryParse(cadena, NumberStyles.Any, CultureInfo.InvariantCulture, out number);
+            
         }
 
         private void btnFiltro_Click(object sender, EventArgs e)
@@ -247,16 +260,21 @@ namespace Presentacion
                 if (ValidarFiltroAvanzado())
                     return;
 
-
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltro.Text;
-
                 
-
                 dgvArticulos.DataSource = negocio.Filtrar(campo, criterio, filtro);
-                
 
+
+                DataGridViewColumn columnaPrecio = dgvArticulos.Columns["Precio"];
+
+
+                if (columnaPrecio != null)
+                {
+
+                    columnaPrecio.DefaultCellStyle.Format = "#,0.##";
+                }
             }
             
             catch (Exception ex)
